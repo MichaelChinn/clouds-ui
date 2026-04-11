@@ -17,9 +17,13 @@
     "./tailwind-preset": "./dist/tailwind-preset.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "tsconfig.json",
+    "tsup.config.ts"
   ],
   "scripts": {
+    "prepare": "tsup && cp src/css/clouds.css dist/clouds.css && cp src/css/tokens.css dist/tokens.css",
     "build": "tsup",
     "build:css": "cp src/css/clouds.css dist/clouds.css && cp src/css/tokens.css dist/tokens.css",
     "dev": "tsup --watch"
