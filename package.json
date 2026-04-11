@@ -1,0 +1,43 @@
+{
+  "name": "clouds-ui",
+  "version": "0.1.0",
+  "description": "Shared component library and design system",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./css": "./dist/clouds.css",
+    "./tokens": "./dist/tokens.css",
+    "./tailwind-preset": "./dist/tailwind-preset.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:css": "cp src/css/clouds.css dist/clouds.css && cp src/css/tokens.css dist/tokens.css",
+    "dev": "tsup --watch"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwindcss": "^3.4.17",
+    "tsup": "8.4.0",
+    "typescript": "5.7.3"
+  },
+  "dependencies": {
+    "clsx": "2.1.1"
+  }
+}
